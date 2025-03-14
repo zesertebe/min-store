@@ -10,7 +10,7 @@ module.exports = (env, argv) => {
       filename: "store.js",
       path: path.resolve(__dirname, "./dist"),
       globalObject: "this",
-      library: "store",
+      library: "min-store",
       libraryTarget: "umd",
       clean: true,
     },
