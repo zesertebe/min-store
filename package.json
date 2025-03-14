@@ -1,5 +1,5 @@
 {
-  "name": "min-store",
+  "name": "@zesertebe/min-store",
   "version": "1.0.0",
   "description": "Simple Redux-like state manager",
   "main": "dist/store.js",
