@@ -1,0 +1,50 @@
+{
+  "name": "min-store",
+  "version": "1.0.0",
+  "description": "Simple Redux-like state manager",
+  "main": "dist/store.js",
+  "types": "dist/store.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "@zesertebe/source": "./src/index.ts",
+        "types": "./dist/store.d.ts",
+        "default": "./dist/store.js"
+      }
+    }
+  },
+  "files": [
+    "dist/store.js",
+    "dist/store.d.ts"
+  ],
+  "scripts": {
+    "build": "webpack --mode production --name paranguatutirimicuaro",
+    "serve": "webpack serve --mode development",
+    "dev": "webpack --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zesertebe/STORE.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Arturo",
+    "email": "zesertebe@gmail.com",
+    "url": "https://adev.dev"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zesertebe/STORE/issues"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.5.4",
+    "webpack": "^5.94.0"
+  },
+  "dependencies": {
+    "webpack-cli": "^5.1.4"
+  },
+  "homepage": "https://github.com/zesertebe/STORE#readme"
+}
