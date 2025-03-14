@@ -1,4 +1,4 @@
-declare module "min-store" {
+declare module "@zesertebe/min-store" {
   export const StoreCreator: (
     items: any,
     props: string[],
