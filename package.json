@@ -1,6 +1,6 @@
 {
   "name": "@zesertebe/min-store",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Simple Redux-like state manager",
   "main": "dist/store.js",
   "type": "module",
