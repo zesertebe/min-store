@@ -3,17 +3,8 @@
   "version": "1.0.4",
   "description": "Simple Redux-like state manager",
   "main": "dist/store.js",
+  "type": "module",
   "types": "dist/store.d.ts",
-  "exports": {
-    "./package.json": "./package.json",
-    ".": {
-      "import": {
-        "@zesertebe/source": "./src/index.ts",
-        "types": "./dist/store.d.ts",
-        "default": "./dist/store.js"
-      }
-    }
-  },
   "files": [
     "dist/store.js",
     "dist/store.d.ts"
