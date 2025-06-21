@@ -47,15 +47,10 @@ export function storeCreator__(items: any, props: string[]) {
   const proxyData = new Proxy(STORE, {
     set: function (target: any, property: string, value) {
       const propertyPath = property.split(".");
-      console.log("target: ", target);
-      console.log("property: ", property);
-      console.log("value: ", value);
-      console.log("subscriptions: ", subscriptions);
       if (propertyPath.length > 1) {
         updateNestedProperty(target, property, value);
       } else {
         const t = target[property];
-        console.log("target,property: ", t);
         target[property as keyof typeof target] = value;
       }
 
@@ -130,8 +125,8 @@ export function storeCreator__(items: any, props: string[]) {
   }
 
   const result: {
-    set: (key: string, value: any) => void;
     get: typeof STORE;
+    data: typeof STORE;
     subscribe: ({
       func,
       property,
@@ -141,11 +136,12 @@ export function storeCreator__(items: any, props: string[]) {
     }) => string | null;
     unsubscribe: (id: string) => void;
   } = {
-    set: (key: string, value: any) => (proxyData[key] = value),
+    // set: (key: string, value: any) => (proxyData[key] = value),
+    data: proxyData,
     get: new Proxy(STORE, {
       set(_, prop, __) {
         console.warn(
-          `🚨 No puedes modificar ${String(prop)} directamente. Usa STORE.set()`,
+          `🚨 No puedes modificar ${String(prop)} directamente. Usa STORE.set`,
         );
         return false;
       },

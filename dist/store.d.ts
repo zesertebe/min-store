@@ -3,7 +3,7 @@ declare module "@zesertebe/min-store" {
     items: any,
     props: string[],
   ) => {
-    set: (key: string, value: any) => void;
+    data: typeof items;
     get: typeof items;
     subscribe: ({
       func,
