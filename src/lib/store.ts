@@ -23,6 +23,9 @@ export interface StoreApi {
   unsubscribe: (id: string) => void;
 }
 
+/**
+ * min-store: Store simple con proxy profundo, suscripciones y autorización por rutas.
+ */
 export function storeCreator__(initial: any = {}, props: string[] = []): StoreApi {
   // No clonamos: preservamos referencias (DOM, funciones, etc.)
   const ROOT = initial;
